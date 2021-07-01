@@ -1,0 +1,1 @@
+{"version":3,"file":"user-event.aggregate.js","sourceRoot":"","sources":["../../../src/cqrs/aggregates/user-event.aggregate.ts"],"names":[],"mappings":";;;AAAA,uCAA6C;AAI7C,MAAa,kBAAmB,SAAQ,oBAAa;IAEnD,YACS,WAAwB,EACxB,gBAAkC;QACzC,KAAK,EAAE,CAAC;QAFD,gBAAW,GAAX,WAAW,CAAa;QACxB,qBAAgB,GAAhB,gBAAgB,CAAkB;IAE3C,CAAC;CAEF;AARD,gDAQC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"sincronized-user.event.js","sourceRoot":"","sources":["../../../src/cqrs/events/sincronized-user.event.ts"],"names":[],"mappings":";;;AAAA,yFAA4E;AAG5E,MAAa,qBAAqB;IAEhC,YACS,WAAwB;QAAxB,gBAAW,GAAX,WAAW,CAAa;IAEjC,CAAC;CAEF;AAPD,sDAOC"}
