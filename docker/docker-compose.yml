@@ -4,10 +4,9 @@ services:
     lb:
         image: haproxy
         ports:
-            - "8080:8080"
+            - 8080:8080
         volumes:
             - ./haproxy:/usr/local/etc/haproxy
-        network_mode: host
 
     cqrs-event-sourcing-1:
         image: cqrs-event-sourcing
@@ -16,7 +15,7 @@ services:
         environment:
             - APPID=instance-1
             - PORT=3101
-        network_mode: host
+            - DOCKER_HOST=host.docker.internal
 
     cqrs-event-sourcing-2:
         image: cqrs-event-sourcing
@@ -25,7 +24,7 @@ services:
         environment:
             - APPID=instance-2
             - PORT=3102
-        network_mode: host
+            - DOCKER_HOST=host.docker.internal
 
     cqrs-event-sourcing-3:
         image: cqrs-event-sourcing
@@ -34,5 +33,5 @@ services:
         environment:
             - APPID=instance-3
             - PORT=3103
-        network_mode: host
+            - DOCKER_HOST=host.docker.internal
 

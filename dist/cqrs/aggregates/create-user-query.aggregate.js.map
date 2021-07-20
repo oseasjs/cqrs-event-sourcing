@@ -1,1 +1,0 @@
-{"version":3,"file":"create-user-query.aggregate.js","sourceRoot":"","sources":["../../../src/cqrs/aggregates/create-user-query.aggregate.ts"],"names":[],"mappings":";;;AAAA,uCAA6C;AAG7C,MAAa,wBAAyB,SAAQ,oBAAa;IAEzD,YACS,WAAwB;QAC/B,KAAK,EAAE,CAAC;QADD,gBAAW,GAAX,WAAW,CAAa;IAEjC,CAAC;CAEF;AAPD,4DAOC"}
