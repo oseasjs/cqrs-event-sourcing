@@ -66,7 +66,7 @@ To start the service, just go to related directory and run:
 * Client Page: 
 _http://localhost:8080_
 
-![Running](images/docker-running.gif)
+![Running](images/running.gif)
 
 ## Docker
 
