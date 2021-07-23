@@ -2,7 +2,6 @@ import { Controller, Post, Body, Logger, HttpStatus, BadRequestException, HttpCo
 import { CreateUserCommandDto } from '../dto/create-user-command.dto';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { CommandBus } from '@nestjs/cqrs';
-// import { CreateUserCommand } from '../../cqrs/commands/create-user.command';
 
 @ApiTags('User normalized on Postgres DB (Command)')
 @Controller('v1/user-command')

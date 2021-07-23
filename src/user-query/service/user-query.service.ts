@@ -2,7 +2,7 @@ import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { UserQuery, UserQueryDocument, EventType } from '../entities/user-query.entity';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { vars } from '../../config/vars';
+import { AppConfig } from '../../config/app.config';
 import { UserQueryDto } from '../dto/user-query.dto';
 import { CreateUserQueryCommand } from '../../cqrs/commands/create-user-query.command';
 import { UserEventCommandAggregate } from 'src/cqrs/aggregates/user-event-command.aggregate';
@@ -23,7 +23,7 @@ export class UserQueryService {
     userModel.id = createUserQueryCommand.userCommand.id;
     userModel.email = createUserQueryCommand.userCommand.email;
     userModel.seed = createUserQueryCommand.userCommand.seed;
-    userModel.appId = vars.appId;
+    userModel.appId = AppConfig.appId;
     userModel.currentStatus = EventType.SYNCRONIZED;
 
     return await userModel

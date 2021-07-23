@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { CreateUserCommandDto } from '../dto/create-user-command.dto';
 import { UserCommand } from '../entities/user-command.entity';
-import { vars } from '../../config/vars';
+import { AppConfig } from '../../config/app.config';
 import { Repository } from 'typeorm';
 import { UserCommandAggregate } from '../../cqrs/aggregates/user-command.aggregate';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -25,7 +25,7 @@ export class UserCommandService {
     let user = new UserCommand();
     user.email = createUserCommandDto.email;
     user.seed = createUserCommandDto.seed;
-    user.appId = vars.appId;
+    user.appId = AppConfig.appId;
 
     return await this.userRepository
       .save(user)

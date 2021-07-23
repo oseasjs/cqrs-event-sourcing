@@ -6,7 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { PostgresTypeOrmConfig } from './config/postgres.typeorm.config';
 import { join } from 'path';
-import { vars } from './config/vars';
+import { AppConfig } from './config/app.config';
 import { CqrsModule } from '@nestjs/cqrs';
 
 @Module({
@@ -15,7 +15,7 @@ import { CqrsModule } from '@nestjs/cqrs';
       rootPath: join(__dirname, '..', 'client'),
       exclude: ['/api*'],
     }),
-    MongooseModule.forRoot(vars.mongoConnectionUrl),    
+    MongooseModule.forRoot(AppConfig.mongoConnectionUrl),    
     TypeOrmModule.forRoot(PostgresTypeOrmConfig),
     UserCommandModule, 
     UserQueryModule,

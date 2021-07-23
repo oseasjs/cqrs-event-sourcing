@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { vars } from '../../config/vars';
+import { AppConfig } from '../../config/app.config';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { EventType, UserEventCommand } from '../entities/user-event-command.entity';
@@ -22,7 +22,7 @@ export class UserEventCommandService {
     let userEvent = new UserEventCommand();
     userEvent.userId = userCommand.id;
     userEvent.seed = userCommand.seed;
-    userEvent.appId = vars.appId;
+    userEvent.appId = AppConfig.appId;
     userEvent.eventType = eventType;
     userEvent.eventData = JSON.stringify(userCommand);
 
